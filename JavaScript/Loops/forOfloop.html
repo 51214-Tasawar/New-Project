@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // const array  = ['Muhammad','Ali' , 'Fasial' , 'Hassan' , 'Ahmad' ] ;
+        // array.forEach(function(name , index){
+        //     document.write(`${index} -> Name is : ${name} <br>`)
+        // })
+        const obArray = [
+            {name:'Muhammad' , age : 10},
+            {name:'Ali' , age : 12},
+            {name:'Waheed' , age : 12},
+            {name:'Nasir' , age : 15},
+            {name:'John' , age : 4},
+        ]
+        obArray.forEach(function(stu , index){
+            document.write(`${index} Name is : ${stu.name} and Age is : ${stu.age} <br>`)
+        })
+    </script>
 </body>
 </html>
