@@ -6,54 +6,42 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="StudentBox">
+     
+    </div>
     <script>
-       let month  ;
-       month = parseInt(window.prompt("Enter Month in Number")) ;
-       switch(month){
-         case 1 :
-            document.write("This Is Month of January") ;
-            break ;
-            case 2 :
-            document.write("This Is Month of February") ;
-            break ;
-            case 3 :
-            document.write("This Is Month of March") ;
-            break ;
-            case 4 :
-            document.write("This Is Month of April") ;
-            break ;
-            case 5 :
-            document.write("This Is Month of May") ;
-            break ;
-            case 6 :
-            document.write("This Is Month of Jun") ;
-            break ;
-            case 7 :
-            document.write("This Is Month of July") ;
-            break ;
-            case 8 :
-            document.write("This Is Month of Auguest") ;
-            break ;
-            case 9 :
-            document.write("This Is Month of September") ;
-            break ;
-            case 10 :
-            document.write("This Is Month of October") ;
-            break ;
-            case 11 :
-            document.write("This Is Month of November") ;
-            break ;
-            case 12 :
-            document.write("This Is Month of December") ;
-            break ;
-            default :
-            document.write("Enter Valid Number") ;
-            break ;
-       }
-       document.write(`<br>`)
-       const a = (month==10||month==11||month==12||month==1||month==2||month==3
-       )?`This is cold Session` : "This is Hot Session" ;
-       document.write(a);
+     const name = window.prompt("Please Enter Student name ") ;
+     const Math = parseInt(window.prompt("Enter Math Marks")) ;
+     const Phy = parseInt(window.prompt("Enter Math Marks")) ;
+     const Chem = parseInt(window.prompt("Enter Math Marks")) ;
+     const Bio = parseInt(window.prompt("Enter Math Marks")) ;
+     const totalMarks = 400 ;
+     const ObtainedMarks = Math + Chem + Phy + Bio ;
+     document.write(`Obtained Marks Are ${ObtainedMarks} <br>`)
+     const percentage = (ObtainedMarks / totalMarks) * 100 ;
+     if(percentage<=100 && percentage>=90){
+        document.write("Congrulation You Got A+ Grade")
+     }
+     else if(percentage<90 && percentage>=80){
+     document.write(`Congrulation You Got A Grade`)
+     }
+     else if(percentage<80 && percentage>=70){
+     document.write(`Congrulation You Got B+ Grade`)
+     }
+     else if(percentage<70 && percentage>=60){
+     document.write(`Congrulation You Got B Grade`)
+     }
+     else if(percentage<60 && percentage>=50){
+     document.write(`Congrulation You Got C+ Grade`)
+     }
+     else if(percentage<50 && percentage>=45){
+     document.write(`Congrulation You pass the examination`)
+     }
+     else {
+        document.write(`Sorry Your fail try Again`)
+     }
+     document.write(`<br> Your Percentage is : ${percentage} <br>`)
+     document.write(`${name} ${percentage<30 ? `You Lost the Chance` : `You have chance to Study Again`}`)
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(){
+            document.write(`This Is Syntax Of IIFE Function <br>`)
+        })()
+        const Anonymous = function(){
+            document.write(`This is Syntax of Anonymous Founction <br>`)
+        }
+        Anonymous()
+       const Arrow=()=>{
+        document.write(`This Is Syntax of Arrow Function <br>`)
+       }
+       Arrow()
+       const Type=()=>`These Are Type of Function Expression`;
+       document.write(Type())
+    </script>
+</body>
+</html>
