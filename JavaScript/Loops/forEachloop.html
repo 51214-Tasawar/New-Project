@@ -7,9 +7,15 @@
 </head>
 <body>
     <script>
-        const numbers = [12,13,23,12,60];
-        numbers.forEach(function(num , index ){
-            document.write(`Index No : ${index}  Value is : ${num} <br>`)
+        const student = [
+            {name : 'Ali' , age : 14},
+            {name : 'Hassan' , age : 12},
+            {name : 'Ahmad' , age : 13},
+            {name : 'Qasim' , age : 19},
+            {name : 'Muhammad' , age : 16},
+        ]
+        student.forEach(function(st , index ){
+            document.write(`Name  : ${st.name}  ------  Age : ${st.age} <br>`)
         })
     </script>
 </body>

@@ -7,26 +7,25 @@
 </head>
 <body>
     <script>
-        const emp = {
-            name :'Ali',
-            age : 20 ,
-            dept:'HR',
-            add : {
-              country : 'Pakistan',
-              Provinance : 'Punjab',
-              city : 'MuzaffarGarh'
+        const emp  = {
+            name : 'Ali' ,
+            age : 23 ,
+            address : {
+                city : 'Multan' ,
+                state : 'Punjab' ,
+                country : 'Pakistan'
             }
         }
-    for(key in emp){
-        if(typeof emp[key]==="Object" ){
-            for(innerKey in emp[key]){
-                document.write(`${innerKey} : ${emp[key][innerKey]}<br>`)
+        for(key in emp){
+            if(typeof emp[key] === "object"){
+                for(innerKey in emp[key]){
+                    document.write(`${innerKey} : ${emp[key][innerKey]}<br>`)
+                }
+            }
+            else{
+                document.write(`${key} : ${emp[key]} <br>`)
             }
         }
-        else{
-            document.write(`${key} : ${emp[key]} <br>`)
-        }
-    }
     </script>
 </body>
 </html>

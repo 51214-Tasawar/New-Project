@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [12,12,23,43,44,556,123,321];
+        array.push(890);
+        document.write(`${array} <br>`)
+        array.pop()
+        document.write(`${array} <br>`)
+        // Also Added shift and unshift
+        array.unshift(5)
+        document.write(`${array} <br>`)
+        array.shift()
+        document.write(`${array} <br>`)
+        document.write(`${array.indexOf(556)}<br>`)
+        document.write(`${array.includes(556)}<br>`)
+        
+    </script>
+</body>
+</html>
