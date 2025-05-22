@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 200px; height: 250px; background-color: red;" >
+        <p id="text" style="color: white; display: flex; flex-wrap: wrap;"></p>
+    </div>
+    <div class="box2" style="width: 200px; height: 250px; background-color: green; color: white;" ></div>
+    <div class="box2" style="width: 200px; height: 250px; background-color: red; color: white;" ></div>
+    <script>
+      document.getElementById("text").innerHTML = "The user might have forgotten to enclose the HTML tag ."
+      document.getElementsByClassName("box2")[1].innerHTML = `
+      <h5>Testing Text Is below here</h5>
+      <p>This Is Paragraph Tag </p>
+      <button style="hover:background-color: red"> Click Here </button>`
+    </script>
+</body>
+</html>
