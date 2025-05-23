@@ -7,15 +7,15 @@
 </head>
 <body>
     <script>
-        const PromiseData = new Promise((res , rej)=>{
-            res(`Testing Text for Promise Data`)
-            rej(`Caatch Rejection while Excuting`)
-        })
-        PromiseData.then((result)=>{
-    document.writeln(result)
+        new Promise((resolve , reject)=>{
+             resolve("Testing New Method")
+             reject("Catch Error")
+        }).then((res)=>{
+            document.writeln(res)
         }).catch((error)=>{
-            document.write(error)
+         document.writeln(error)
         })
+
     </script>
 </body>
 </html>
