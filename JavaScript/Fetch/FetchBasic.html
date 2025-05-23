@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Box1{
+            width: 230px;
+            height: 300px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            font-weight: 300;
+            font-size: large;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Box1">
+
+    </div>
+   <script>
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then((res)=>res.json())
+    .then((user)=>{
+        document.getElementById("Box1").innerHTML = `
+        <div>
+        <p><strong>Id : </strong>${user.id}</p>
+        <p><strong>userId : </strong>${user.userId}</p>
+        <p><strong>Title : </strong>${user.title}</p>
+        <p><strong>Body : </strong>${user.body}</p>
+     </div>`
+    }).catch((error)=>{
+            document.writeln(`Getting Error : ${error}`)
+    })
+   </script>
+</body>
+</html>
