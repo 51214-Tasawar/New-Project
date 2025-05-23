@@ -7,15 +7,21 @@
 </head>
 <body>
     <script>
-        new Promise((resolve , reject)=>{
-             resolve("Testing New Method")
-             reject("Catch Error")
-        }).then((res)=>{
-            document.writeln(res)
+        function UserDetail(){
+            return new Promise((res , rej)=>{
+                document.write(`Loading....`)
+                setTimeout(()=>{
+                    const emp = { Name : 'Ali' , Desination:'Manager' }
+                    res(emp);
+                },2000)
+            })
+        }
+        UserDetail().then((data)=>{
+            document.write(`Received Data : `)
+            document.writeln(`Name : ${data.Name}   Desination : ${data.Desination}`)
         }).catch((error)=>{
-         document.writeln(error)
+            document.writeln(`Getting Error : ${error}`)
         })
-
     </script>
 </body>
 </html>
