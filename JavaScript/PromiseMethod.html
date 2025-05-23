@@ -7,7 +7,15 @@
 </head>
 <body>
     <script>
-        
+        const NPromise = new Promise((res , rej)=>{
+        if(res){
+            document.write('Code is Doing Well')
+        }
+        else if(rej){
+            document.writeln("Catching Error in this code ")
+        }
+        })
+        NPromise.then(false)
     </script>
 </body>
 </html>
