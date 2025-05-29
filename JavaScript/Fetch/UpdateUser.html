@@ -4,17 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .OuterBox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+            gap: 15px;
+        }
+        .userBox{
+            height: 350px;
+            width: 250px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            border: none;
+            border-radius: 10px;
+        }
+        .userBox > button {
+            width: max-content;
+            height: max-content;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            background-color: blue;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="OuterBox" id="OuterBox">
 
-    </div>
-    <div class="userBox" id="p-">
-        <p><strong></strong></p>
-        <p><strong></strong></p>
-        <p><strong></strong></p>
-        <p><strong></strong></p>
-        <button class="update-btn" onclick="">Update</button>
     </div>
     <script>
        fetch('https://jsonplaceholder.typicode.com/posts')
@@ -22,16 +46,19 @@
        .then(users=>
         document.getElementById('OuterBox').innerHTML = users.map((user)=>{
            return `
-            <div class="userBox" id="p-">
+            <div class="userBox" id="p-${user.id}">
             <p><strong>ID : </strong>${user.id}</p>
-            <p><strong>USERID</strong>${user.userId}</p>
-            <p><strong>TITLE</strong>${user.title}</p>
-            <p><strong>BODY</strong>${user.body}</p>
-            <button class="update-btn" onclick="">Update</button>
+            <p><strong>USERID : </strong>${user.userId}</p>
+            <p><strong>TITLE : </strong>${user.title}</p>
+            <p><strong>BODY : </strong>${user.body}</p>
+            <button class="update-btn" onclick="UpdateUser(${user.id})">Update</button>
             </div>
            `
         })
        )
+       function UpdateUser(UserPost){
+
+       }
     </script>
 </body>
 </html>
